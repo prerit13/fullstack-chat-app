@@ -24,7 +24,10 @@ app.use(cookieParser());
 // ✅ PRODUCTION SAFE CORS
 app.use(
   cors({
-    origin: true, // allow same-origin in production
+    origin: [
+      "http://localhost:5173",
+      "https://fullstack-chat-app-k3w6.onrender.com",
+    ],
     credentials: true,
   })
 );
